@@ -6,7 +6,7 @@ var validChar = [55]byte{'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 
 
 func GenString(charLength int, repeatChar bool) string {
 	var result string
-	rand.Seed(time.now().Unix())
+	rand.Seed(time.Now().UnixNano())
 	for letter := 0; letter < charLength; letter++ {
 		prePick := 0
 		for {
