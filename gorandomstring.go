@@ -9,7 +9,7 @@ func GenString(charLength int, repeatChar bool) string {
 	for letter := 0; letter < charLength; letter++ {
 		prePick := 0
 		for {
-			picker := rand.Int() % 55
+			picker := rand.Intn(54)
 			if picker == prePick && !repeatChar {
 				continue
 			} else {
