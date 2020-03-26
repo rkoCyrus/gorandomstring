@@ -18,5 +18,5 @@ func genString(charLength int) string {
 			}
 		}
 	}
-	return result
+	return string(result)
 }
