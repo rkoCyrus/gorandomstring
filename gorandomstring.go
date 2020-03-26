@@ -6,10 +6,10 @@ var validChar = [55]byte{'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 
 
 func GenString(charLength int, repeatChar bool) string {
 	var result string
+	picker := rand.Intn(54)
 	for letter := 0; letter < charLength; letter++ {
 		prePick := 0
 		for {
-			picker := rand.Intn(54)
 			if picker == prePick && !repeatChar {
 				continue
 			} else {
