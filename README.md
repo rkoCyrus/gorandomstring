@@ -7,4 +7,4 @@ Generate more human readable meaningless string
 `github.com/rkoCyrus/gorandomstring`
 
 # How to call?
-`gorandomstring.GenString((Integer, Length of the string),(Boolean, do you need same charther in a row))`
+`gorandomstring.GenString((Integer, Length of the string),(Boolean, do you allow same charther in a row))`
