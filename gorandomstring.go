@@ -11,7 +11,7 @@ var validChar = [55]byte{'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 
 //Generate human redable string in bunch of charther (You can decide that reusing the same charther generated befor or not)
 func GenString(charLength int, repeatChar bool) string {
 	if charLength <= 0 {
-		panic("Generate notthing")
+		panic("Generate nothing")
 	}
 	var result string
 	rand.Seed(time.Now().UnixNano())
