@@ -10,10 +10,12 @@ var validChar = [55]byte{'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 
 
 //Generate human redable string in bunch of charther (You can decide that reusing the same charther generated befor or not)
 func GenString(charLength int, repeatChar bool) string {
+	//For loop only support int (with negative), so I decide add this
 	if charLength <= 0 {
 		panic("Generate nothing")
 	}
 	var result string
+	//First seed
 	rand.Seed(time.Now().UnixNano())
 	for letter := 0; letter < charLength; letter++ {
 		prePick := 0
@@ -26,6 +28,10 @@ func GenString(charLength int, repeatChar bool) string {
 				prePick = picker
 				break
 			}
+		}
+		//Adding refreshing seed to look like random
+		if prepick % letter == 0 && letter != 0 && prepick != 0 {
+			rand.Seed(time.Now().UnixNano())
 		}
 	}
 	return result
