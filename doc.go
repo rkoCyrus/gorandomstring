@@ -6,7 +6,7 @@
 	I and l/1
 	0 and o/O
 
-        New in 1.1.0:
+        Update in 5-4-2020:
         Add refresh random seed when reach a requirment
 */
 
