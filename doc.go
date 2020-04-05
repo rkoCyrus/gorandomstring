@@ -5,6 +5,9 @@
 	This package is generating random charather without highly simular charther:
 	I and l/1
 	0 and o/O
+
+        New in 1.1.0:
+        Add refresh random seed when reach a requirment
 */
 
 package gorandomstring
