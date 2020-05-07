@@ -30,8 +30,10 @@ func GenString(charLength int, repeatChar bool) string {
 			}
 		}
 		//Adding refreshing seed to look like random
-		if prePick % letter == 0 && letter != 0 && prePick != 0 {
-			rand.Seed(time.Now().UnixNano())
+		if letter != 0 && prePick != 0 {
+			if prePick % letter == 0 {
+				rand.Seed(time.Now().UnixNano())
+			}
 		}
 	}
 	return result
